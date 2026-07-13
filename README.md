@@ -39,6 +39,7 @@ Features
 - Payment simulation
 
 Business Overview
+
 Business name:
 Hudéa Patisserie
 
