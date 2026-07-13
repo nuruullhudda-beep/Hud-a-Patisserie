@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Hudéa Patisserie</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="cart.html">🛒 Cart</a>
+</nav>
+
+<section class="checkout">
+    <h1 class="checkout-title">🛒 Checkout</h1>
+    <div class="checkout-container">
+        <div class="order-box">
+            <h2>Your Order</h2>
+            <div id="checkout-items"></div>
+            <div class="checkout-total-box">
+                <span>Total Payment</span>
+                <h3 id="checkout-total">Rp0</h3>
+            </div>
+        </div>
+
+        <div class="payment-box">
+            <h2>Customer Information</h2>
+            <input type="text" id="nama" placeholder="Full Name">
+            <input type="text" id="phone" placeholder="Phone Number">
+            <textarea id="alamat" placeholder="Address"></textarea>
+
+            <h2>Payment Method</h2>
+            <select id="payment" name="payment">
+                <option value="" selected disabled>Select Payment 
+                Method</option>
+                <option value="QRIS">QRIS</option>
+                <option value="BNI">BNI</option>
+                <option value="BCA">BCA</option>
+                <option value="Cash on Delivery">Cash on Delivery</option>
+            </select>
+
+            <div id="payment-info"></div>
+
+            <button id="order-button" type="button">
+                 Place Order
+            </button>
+        </div>
+    </div>
+</section>
+
+<div id="success-popup" class="popup">
+    <div class="popup-content">
+        <h2>Order Successful!</h2>
+        <p>Thank you for shopping at <b>Hudéa Patisserie</b>.</p>
+        <p>Your order is being processed.</p>
+
+        <button onclick="kembaliHome()">
+            Back to Home
+        </button>
+    </div>
+</div>
+
+<script src="checkout.js"></script>
+</body>
+</html>

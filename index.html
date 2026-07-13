@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Hudéa</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="cart.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
+    </nav>
+    <header id ="home" class="hero">
+        <h1>🍰Hudéa Patisserie</h1>
+        <p>Crafted with Passion, Served with Love</p>
+        <a href="#products">Shop Now</a>
+    </header>
+
+    <section class="search-box">
+        <input
+            type="text"
+            id="search"
+            placeholder="🔎   Search for Product">
+    </section>
+
+    <section class="filter">
+    <button data-filter="All">All</button>
+    <button data-filter="Bakery">Bakery</button>
+    <button data-filter="Drinks">Drinks</button>
+</section>
+     
+    <section id="products">
+        <h1>Our Products</h1>
+        <div class="products">
+        <div class="card" data-category="Bakery">
+            <img src="image/Strawberry Roll Cake.jpg" alt="Strawberry Roll Cake">
+            <h3>Strawberry Roll Cake</h3>
+            <p>Rp28.000</p>
+            <button class="view-detail" onclick="showDetail(
+                `Strawberry Roll Cake`,
+                `Sponge cake lembut dengan isian krim vanila yang creamy,
+                dihiasi whipped cream dan stroberi segar pilihan. Perpaduan
+                rasa manis dan segar yang cocok dinikmati sebagai dessert
+                atau cemilan di setiap momen.`,
+                `Ukuran: Mini/Personal`,
+                `Ketahanan: 1 hari suhu ruang/3-4 hari di kulkas`,
+                `Pengiriman: Khusus Grab/Gojek (Instant/Sameday)`,
+                `image/Strawberry Roll Cake.jpg`
+            )">View Details</button>
+            <button
+            class="btn-card"
+            data-id="1"
+            data-name="Strawberry Roll Cake"
+            data-price="28.000"
+            data-category="Bakery"
+            data-image="image/Strawberry Roll Cake.jpg"
+            onclick="tambahKeKeranjang(this)"> 
+            Add to Cart
+        </button>
+
+        <button
+            class="buy-now"
+            data-id="1"
+            data-name="Strawberry Roll Cake"
+            data-price="28.000"
+            data-category="Bakery"
+            onclick="buyNow(this)">
+            Buy Now
+        </button>
+        </div>
+
+        <div class="card" data-category="Bakery">
+            <img src="image/Fruit Pastry Croissant.jpg" alt="Fruit Pastry Croissant">
+            <h3>Fruit Pastry Croissant</h3>
+            <p>Rp32.000</p>
+            <button class="view-detail" onclick="showDetail(
+                `Fruit Pastry Croissant`,
+                `Croissant renyah dengan lapisan buttery, dipadukan dengan
+                krim vanila lembut dan aneka buah pilihan.
+                Perpaduan tekstur yang renyah, creamy, dan segar
+                menjadikannya pilihan sempurna untuk cemilan maupun dessert`,
+                `Ukuran: Personal`,
+                `Ketahanan: 1 hari suhu ruang/3-4 hari di kulkas`,
+                `Pengiriman: Khusus Grab/Gojek (Instant/Sameday)`,
+                `image/Fruit Pastry Croissant.jpg`
+            )">View Details</button>
+            <button
+            class="btn-card"
+            data-id="2"
+            data-name="Fruit Pastry Croissant"
+            data-price="32.000"
+            data-category="Bakery"
+            data-image="image/Fruit Pastry Croissant.jpg"
+            onclick="tambahKeKeranjang(this)">
+            Add to Cart
+        </button>
+        <button
+            class="buy-now"
+            data-id="2"
+            data-name="Fruit Pastry Croissant" 
+            data-price="32.000"
+            data-category="Bakery"
+            onclick="buyNow(this)">
+            Buy Now
+        </button> 
+        </div>
+
+        <div class="card" data-category="Bakery">
+            <img src="image/Matcha Strawberry Cheesecake.jpg" alt="Matcha Strawberry Cheesecake">
+            <h3>Matcha Strawberry Cheesecake</h3>
+            <p>Rp38.000</p>
+            <button class="view-detail" onclick="showDetail(
+                `Matcha Strawberry Cheesecake`,
+                `Kombinasi premium Matcha Basque Cheesecake yang gurih-creamy dengan
+                kesegaran strawberry cream dan buah stroberi segar di atasnya.
+                Manisnya pas, lembut, dan tidak bikin enek!`,
+                `Isi: 1 Pcs`,
+                `Ketahanan: 1 hari suhu ruang/3-4 hari di kulkas`,
+                `Pengiriman: Khusus Grab/Gojek (Instant/Sameday)`,
+                `image/Matcha Strawberry Cheesecake.jpg`
+            )">View Details</button>
+            <button
+            class="btn-card"
+            data-id="3"
+            data-name="Matcha Strawberry Cheesecake"
+            data-price="38.000"
+            data-category="Bakery"
+            data-image="image/Matcha Strawberry Cheesecake.jpg"
+            onclick="tambahKeKeranjang(this)">
+            Add to Cart
+        </button>
+        
+        <button
+            class="buy-now"
+            data-id="3"
+            data-name="Matcha Strawberry Cheesecake"
+            data-price="38.000"
+            data-category="Bakery"
+            onclick="buyNow(this)">
+            Buy Now
+        </button>
+        </div>
+
+        <div class="card" data-category="Bakery">
+            <img src="image/Red Velvet Strawberry Cake.jpg" alt="Red Velvet Strawberry Cake">
+            <h3>Red Velvet Strawberry Cake</h3>
+            <p>Rp30.000</p>
+            <button class="view-detail" onclick="showDetail(
+                `Red Velvet Strawberry Cake`,
+                `Kue Red Velvet klasik yang super lembut berpadu sempurna dengan
+                lapisan cream cheese yang gurih.
+                Ditambah siraman saus stroberi (strawberry coulis) yang lumer
+                dan potongan stroberi segar di atasnya, memberikan sensasi rasa manis, gurih,
+                dan asam segar dalam setiap suapan`,
+                `isi: 1 Slice`,
+                `Ketahanan: 1 hari suhu ruang/3-4 hari di kulkas`,
+                `Pengiriman: Khusus Grab/Gojek (Instant/Same day)`,
+                `image/Red Velvet Strawberry Cake.jpg`
+            )">View Details</button>
+            <button
+            class="btn-card"
+            data-id="4"
+            data-name="Red Velvet Strawberry Cake"
+            data-price="30.000"
+            data-category="Bakery"
+            data-image="image/Red Velvet Strawberry Cake.jpg"
+            onclick="tambahKeKeranjang(this)">
+            Add to Cart
+        </button>
+        
+        <button
+            class="buy-now"
+            data-id="4"
+            data-name="Red Velvet Strawberry Cake"
+            data-price="30.000"
+            data-category="Bakery"
+            onclick="buyNow(this)">
+            Buy Now
+        </button>
+        </div>
+
+        <div class="card" data-category="Bakery">
+            <img src="image/Strawberry Cream Donut.jpg" alt="Strawberry Cream Donut">
+            <h3>Strawberry Cream Donut</h3>
+            <p>Rp28.000</p>
+            <button class="view-detail" onclick="showDetail(
+                `Strawberry Cream Donut`,
+                `Donat premium super lembut dengan isian melimpah! Strawberry Cream Donut
+                memadukan kelembutan adonan donat yang ditaburi gula halus,
+                dengan whipped cream premium yang ringan dan manis pas, serta potongan buah stroberi segar
+                yang melimpah di dalam dan di atasnya`,
+                `Isi: 1 Pcs`,
+                `Ketahanan: 1 hari suhu ruang/3-4 hari di kulkas`,
+                `Pengiriman: Khusus Grab/Gojek (Instant/Sameday)`,
+                `image/Strawberry Cream Donut.jpg`
+            )">View Details</button>
+            <button
+            class="btn-card"
+            data-id="5"
+            data-name="Strawberry Cream Donut"
+            data-price="28.000"
+            data-category="Bakery"
+            data-image="image/Strawberry Cream Donut.jpg"
+            onclick="tambahKeKeranjang(this)">
+            Add to Cart
+        </button>
+        
+        <button
+            class="buy-now"
+            data-id="5"
+            data-name="Strawberry Cream Donut"
+            data-price="28.000"
+            data-category="Bakery"
+            onclick="buyNow(this)">
+            Buy Now
+        </button>
+        </div>
+
+        <div class="card" data-category="Bakery">
+            <img src="image/Strawberry Chocolate Toast.jpg" alt="Strawberry Chocolate Toast">
+            <h3>Strawberry Chocolate Toast</h3>
+            <p>Rp34.000</p>
+            <button class="view-detail" onclick="showDetail(
+                `Strawberry Chocolate Toast`,
+                `Roti panggang tebal (thick toast) yang renyah di luar dan
+                lembut di dalam, dilapisi dengan krim putih yang melimpah dan
+                dekorasi saus cokelat di atasnya. Disajikan estetik dengan
+                satu buah stroberi segar utuh, cocok banget untuk teman minum kopi atau teh.`,
+                `Isi: 1 Porsi`,
+                `Ketahanan: 1 hari suhu ruang/3-4 hari di kulkas`,
+                `Pengiriman: Khusus Grab/Gojek (Instant/Sameday)`,
+                `image/Strawberry Chocolate Toast.jpg`
+            )">View Details</button>
+            <button
+            class="btn-card"
+            data-id="6"
+            data-name="Strawberry Chocolate Toast"
+            data-price="38.000"
+            data-category="Bakery"
+            data-image="image/Strawberry Chocolate Toast.jpg"
+            onclick="tambahKeKeranjang(this)">
+            Add to Cart
+        </button>
+        
+        <button
+            class="buy-now"
+            data-id="6"
+            data-name="Strawberry Chocolate Toast"
+            data-price="38.000"
+            data-category="Bakery"
+            onclick="buyNow(this)">
+            Buy Now
+        </button>
+        </div>
+
+        <div class="card" data-category="Drinks">
+            <img src="image/Iced Vanilla Latte.jpg" alt="Iced Vanilla Latte">
+            <h3>Iced Vanilla Latte</h3>
+            <p>Rp25.000</p>
+            <button class="view-detail" onclick="showDetail(
+                `Iced Vanilla Latte`,
+                `Perpaduan sempurna antara espresso yang mantap,
+                susu cair yang creamy, dan sirup vanilla premium yang manis nan harum.`,
+                `Volume: 350ml (Porsi pas untuk mood booster kamu)`,
+                ``,
+                `Pengiriman: Khusus Grab/Gojek (Instant/Sameday)`,
+                `image/Iced Vanilla Latte.jpg`
+            )">View Details</button>
+            <button
+            class="btn-card"
+            data-id="7"
+            data-name="Iced Caffe Latte"
+            data-price="25.000"
+            data-category="Drinks"
+            data-image="image/Iced Vanilla Latte.jpg"
+            onclick="tambahKeKeranjang(this)">
+            Add to Cart
+        </button>
+        
+        <button
+            class="buy-now"
+            data-id="7"
+            data-name="Iced Caffe Latte"
+            data-price="25.000"
+            data-category="Drinks"
+            onclick="buyNow(this)">
+            Buy Now
+        </button>
+        </div>
+
+        <div class="card" data-category="Drinks">
+            <img src="image/Mango Float Smoothie.jpg" alt="Mango Float Smoothie">
+            <h3>Mango Float Smoothie</h3>
+            <p>Rp32.000</p>
+            <button class="view-detail" onclick="showDetail(
+                `Mango Float Smoothie`,
+                `Smoothie mangga yang kental, manis, dan menyegarkan, dibuat dari buah mangga asli pilihan.
+                Disajikan istimewa dengan topping satu scoop es krim vanilla yang creamy serta potongan dadu 
+                buah mangga segar di atasnya untuk perpaduan rasa manis-segar yang sempurna.`,
+                `Volume: 350ml (Porsi pas untuk mood booster kamu)`,
+                `Pengiriman: Khusus Grab/Gojek (Instant/Sameday)`,
+                ``,
+                `image/Mango Float Smoothie.jpg`
+            )">View Details</button>
+            <button
+            class="btn-card"
+            data-id="8"
+            data-name="Mango Float Smoothie"
+            data-price="32.000"
+            data-category="Drinks"
+            data-image="image/Mango Float Smoothie.jpg"
+            onclick="tambahKeKeranjang(this)">
+            Add to Cart
+        </button>
+        
+        <button
+            class="buy-now"
+            data-id="8"
+            data-name="Mango Float Smoothie"
+            data-price="32.000"
+            data-category="Drinks"
+            onclick="buyNow(this)">
+            Buy Now
+        </button>
+        </div>
+
+        <div class="card" data-category="Drinks">
+            <img src="image/Matcha Latte.jpg" alt="Matcha Latte">
+            <h3>Iced Matcha Latte</h3>
+            <p>Rp25.000</p>
+            <button class="view-detail" onclick="showDetail(
+                `Iced Matcha Latte`,
+                `Buat pencinta matcha wajib coba! Matcha Latte dingin yang dibuat dari
+                bubuk matcha asli Jepang berkualitas tinggi. Perpaduan rasa khas matcha yang 
+                edikit earthy dan pahit alami berpadu sempurna dengan kelembutan susu segar.
+                Manisnya pas dan bikin rileks!`,
+                `Volume: 350ml (Porsi pas untuk mood booster kamu)`,
+                ``,
+                `Pengiriman: Khusus Grab/Gojek (Instant/Sameday)`,
+                `image/Matcha Latte.jpg`
+            )">View Details</button>
+            <button
+            class="btn-card"
+            data-id="9"
+            data-name="Matcha Latte"
+            data-price="25.000"
+            data-category="Drinks"
+            data-image="image/Matcha Latte.jpg"
+            onclick="tambahKeKeranjang(this)">
+            Add to Cart
+        </button>
+        
+        <button
+            class="buy-now"
+            data-id="9"
+            data-name="Matcha Latte"
+            data-price="25.000"
+            data-category="Drinks"
+            onclick="buyNow(this)">
+            Buy Now
+        </button>
+        </div>
+
+        <div class="card" data-category="Drinks">
+            <img src="image/Strawberry Lemon Mocktail.jpg" alt="Strawberry Lemon Mocktail">
+            <h3>Strawberry Lemon Mocktail</h3>
+            <p>Rp26.000</p>
+            <button class="view-detail" onclick="showDetail(
+                `Strawberry Lemon Mocktail`,
+                `Minuman non-alkohol yang super menyegarkan, memadukan sirup stroberi manis dengan
+                perasan jeruk lemon yang asam segar dan soda bening. Disajikan estetik dengan es batu,
+                irisan buah lemon, potongan stroberi segar di dalam gelas, serta hiasan daun mint untuk
+                aroma yang menenangkan. Cocok banget dinikmati saat cuaca panas!`,
+                `Volume: 350ml (Porsi pas untuk mood booster kamu)`,
+                ``,
+                `Pengiriman: Khusus Grab/Gojek (Instant/Sameday)`,
+                `image/Strawberry Lemon Mocktail.jpg`
+            )">View Details</button>
+            <button
+            class="btn-card"
+            data-id="10"
+            data-name="Strawberry Lemon Mocktail"
+            data-price="26.000"
+            data-category="Drinks"
+            data-image="image/Strawberry Lemon Mocktail.jpg"
+            onclick="tambahKeKeranjang(this)">
+            Add to Cart
+        </button>
+        
+        <button
+            class="buy-now"
+            data-id="10"
+            data-name="Strawberry Lemon Mocktail"
+            data-price="26.000"
+            data-category="Drinks"
+            onclick="buyNow(this)">
+            Buy Now
+        </button>
+        </div>
+
+        <div class="card" data-category="Drinks">
+            <img src="image/Blackberry Iced Latte.jpg" alt="Blackberry Iced Latte">
+            <h3>Blackberry Iced Latte</h3>
+            <p>Rp38.000</p>
+            <button class="view-detail" onclick="showDetail(
+                `Blackberry Iced Latte`,
+                `Nikmati perpaduan unik dan menyegarkan dari Blackberry Iced Latte!
+                Kombinasi sempurna antara espresso premium yang mantap, kelembutan susu segar,
+                serta kesegaran sirup buah blackberry asli yang manis alami. Disajikan dingin dengan
+                es batu dan buah blackberry utuh di atasnya untuk memberikan sensasi rasa fruity dan
+                kopi yang seimbang di setiap sesapan`,
+                `Volume: 350ml (Porsi pas untuk mood booster kamu)`,
+                `Pengiriman: Khusus Grab/Gojek (Instant/Sameday)`,
+                ``,
+                `image/Blackberry Iced Latte.jpg`
+            )">View Details</button>
+            <button
+            class="btn-card"
+            data-id="11"
+            data-name="Blackberry Iced Latte"
+            data-price="38.000"
+            data-category="Drinks"
+            data-image="image/Blackberry Iced Latte.jpg"
+            onclick="tambahKeKeranjang(this)">
+            Add to Cart
+        </button>
+        
+        <button
+            class="buy-now"
+            data-id="11"
+            data-name="Blackberry Iced Latte.jpg"
+            data-price="38.000"
+            data-category="Drinks"
+            onclick="buyNow(this)">
+            Buy Now
+        </button>
+        </div>
+
+        <div class="card" data-category="Drinks">
+            <img src="image/Strawberry Matcha Oats.jpg" alt="Strawberry Matcha Oats">
+            <h3>Strawberry Matcha Oats</h3>
+            <p>Rp22.000</p>
+            <button class="view-detail" onclick="showDetail(
+                `Strawberry Matcha Oats`,
+                `Minuman layer premium super estetik yang menyegarkan harimu!
+                Strawberry Matcha Latte memadukan asam-manis segar dari buah stroberi asli
+                di lapisan bawah, gurih dan creamy-nya susu cair segar di lapisan tengah,
+                serta pekatnya rasa teh hijau matcha Jepang berkualitas tinggi di lapisan atas.
+                Kombinasi rasa yang seimbang, unik, dan pastinya memanjakan lidah di setiap tegukan`,
+                `Volume: 350ml (Porsi pas untuk mood booster kamu)`,
+                ``,
+                `Pengiriman: Khusus Grab/Gojek (Instant/Sameday)`,
+                `image/Strawberry Matcha Oats.jpg`
+            )">View Details</button>
+            <button
+            class="btn-card"
+            data-id="12"
+            data-name="Strawberry Matcha Oats"
+            data-price="22.000"
+            data-category="Drinks"
+            data-image="image/Strawberry Matcha Oats.jpg"
+            onclick="tambahKeKeranjang(this)">
+            Add to Cart
+        </button>
+        
+        <button
+            class="buy-now"
+            data-id="12"
+            data-name="Strawberry Matcha Oats"
+            data-price="22.000"
+            data-category="Drinks"
+            onclick="buyNow(this)">
+            Buy Now
+        </button>
+        </div>
+    </div>
+    </section>
+    <section id="about" class="about">
+         <div class="about-content">
+            <h2>About</h2>
+            <p>
+                Hudéa Patisserie adalah toko yang menyediakan berbagai pilihan bakery
+                dan minuman premium dengan bahan berkualitas, dibuat dengan penuh
+                cinta untuk menemani setiap momen spesial pelanggan.
+            </p>
+            <p>
+                Kami percaya bahwa setiap gigitan dan setiap tegukan dapat
+                menciptakan momen yang berkesan, baik saat dinikmati sendiri
+                maupun bersama orang tersayang.
+            </p>
+        </div>
+    </section>
+    <footer id="contact">
+        <h3>Contact Us</h3>
+        <p>Instagram: @HudéaPatisserie_</p>
+        <p>Email: HudéaPatisserie@gmail.com</p>
+        <p>Phone: 0812-3456-7890</p>
+    </footer>
+
+    <div id="detailPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closeDetail()">&times;</span>
+        <img id="popupImage" src="" alt="Product Image">
+        <h2 id="popupTitle"></h2>
+        <p id="popupPrice"></p>
+        <h3>Description</h3>
+        <p id="popupDescription"></p>
+
+        <p id="popupInfo"></p>
+        <p id="popupKetahanan"></p>
+        <p id="popupPengiriman"></p>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
