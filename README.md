@@ -53,9 +53,11 @@ Value Proposition
 - Proses pembelian praktis
 
 Target Market
+
 Target pasar Hudéa Patisserie adalah remaja hingga dewasa (15-35 tahun). Khususnya mahasiswa, karyawan, dan pecinta bakery maupun coffe yang menyukai kemudahan dalam berbelanja online.
 
 Market Analysis
+
 Tren pembelian Hudéa Patisserie online terus meningkat sehingga membuka peluang bagi bisnis bakery digital. Hudéa Patisserie menawarkan pengalaman berbelanja yang sederhana dengan katalog produk yang lengkap
 
 Competitors
@@ -65,6 +67,7 @@ Competitors
 - Bakery Lokal
 
 Product Management
+
 Website menyediakan dua kategori produk, yaitu Bakery dan Drinks. Setiap produk dilengkapi dengan foto, nama, harga, deskripsi, ukuran atau volume, informasi ketahanan produk, serta informasi pengiriman.
 
 Business Model
@@ -72,9 +75,11 @@ Business Model
 - Revenue Stream: Penjualan bakery, minuman, dan promo bundling.
 
 Pricing Strategy
+
 Produk dijual dengan kisaran harga Rp22.000–Rp38.000. Promosi dilakukan melalui media sosial, diskon pada hari tertentu, dan paket bundling bakery dengan minuman.
 
 Checkout & Payment
+
 Proses pembelian dimulai dari memilih produk, menambahkan ke keranjang, melakukan checkout, hingga memilih metode pembayaran. Website menggunakan simulasi payment gateway (Midtrans Dummy) sebagai contoh alur pembayaran online.
 
 SEO, Security & Maintenance
@@ -84,6 +89,7 @@ SEO, Security & Maintenance
 - Memperbarui katalog produk dan memperbaiki bug secara berkala.
 
 Data Analytics
+
 Data analytics dapat dimanfaatkan untuk mengetahui produk yang paling diminati, jumlah transaksi, efektivitas promosi, dan perilaku pelanggan sebagai dasar pengambilan keputusan bisnis.
 
 Technologies Used
