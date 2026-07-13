@@ -3,6 +3,7 @@
 Hudéa Patisserie adalah website e-commerce yang menyediakan berbagai pilihan bakery dan minuman premium. Website ini dibuat sebagai proyek mata kuliah KAIT II (HTML/E-Commerce) menggunakan HTML, CSS, dan JavaSCript.
 
 Project Structure
+
 Hudéa/
 ├── index.html
 ├── style.css
