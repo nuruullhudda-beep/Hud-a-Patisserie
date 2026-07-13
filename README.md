@@ -4,6 +4,7 @@ Hudéa Patisserie adalah website e-commerce yang menyediakan berbagai pilihan ba
 
 Project Structure
 
+```text
 Hudéa/
 ├── index.html
 ├── style.css
@@ -27,6 +28,7 @@ Hudéa/
     ├── Strawberry Lemon Mocktail.jpg
     ├── Strawberry Matcha Oats.jpg
     └── Strawberry Roll Cake.jpg
+```
 
 Features
 - Product catalog
